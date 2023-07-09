@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    transition: all .5s linear;
+    box-sizing: border-box;
+    background: hsl(218, 23%, 16%);
+    color: white;
+    padding-inline: 2rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.advice{
+    padding: 5rem 3rem;
+    text-align: center;
+    background: hsl(217, 19%, 24%) ;
+    position: relative;
+    border-radius: 1.5rem;
+    width: 50rem;
+}
+
+.advice h4{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: hsl(150, 100%, 66%);;
+}
+
+.advice p{
+    margin-block: 2rem;
+    font-size: 1.7rem;
+    /* width: 60%; */
+    margin-inline: auto;
+    line-height: 1.5;
+}
+
+.advice img{
+    width: 100%;
+}
+
+.button{
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    background: hsl(150, 100%, 66%);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.button:hover{
+   box-shadow: hsl(150, 100%, 66%) 0px 7px 29px 0px;
+}
+
+
+.loader{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    animation: rotate 3s linear infinite;
+}
+
+.loader.hide{
+    opacity: 0;
+    display: none;
+}
+
+.circle{
+    display: inline-block;
+    background-color: hsl(193, 38%, 86%);
+    height: 40px;
+    width: 40px;
+    transform: scale(0);
+    border-radius: 50%;
+    animation: grow .4s linear infinite;
+    margin: 0 -4px;
+}
+
+
+.circle:nth-child(2){
+    animation-delay: .2s;
+}
+
+@keyframes rotate {
+    to{
+        /* transform: rotate(360deg); */
+    }
+}
+
+@keyframes grow {
+    50%{
+        transform: scale(1);
+    }
+}
+
+/* .circle:nth-child(2){
+} */
